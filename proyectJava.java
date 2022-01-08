@@ -7,5 +7,4 @@ public class proyectJava {
 		System.out.println("Proyecto vacío para Story10");
 
 	}
-
 }
