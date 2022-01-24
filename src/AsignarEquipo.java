@@ -1,7 +1,7 @@
 
 public class AsignarEquipo {
-      private Equipo equipo;
-      private Jugador jugador;
+      private static Equipo equipo;
+      private static Jugador jugador;
       
       
       public AsignarEquipo() {
@@ -10,18 +10,20 @@ public class AsignarEquipo {
       
       public void setEquipo(Equipo equipo) {
   		//code here
+    	  this.equipo = equipo;
       }
       
       public void setJugador(Jugador jugador) {
   		//code here
+    	  this.jugador=jugador;
       }
       
-      public Equipo getEquipo(){
-          return equipo;
+      public  Equipo getEquipo(){
+          return this.equipo;
       }
       
-      public Jugador getJugador(){
-         return jugador;
+      public  Jugador getJugador(){
+         return this.jugador;
       }
       
 }
