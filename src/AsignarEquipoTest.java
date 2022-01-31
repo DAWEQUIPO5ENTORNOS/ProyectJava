@@ -23,18 +23,18 @@ class AsignarEquipoTest{
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
 		assertEquals(null, jugadorGuardado.getNombreJugador());
-		assertEquals(0, jugadorGuardado.getEdad());
+		assertEquals(-1, jugadorGuardado.getEdad());
 		assertEquals(null, jugadorGuardado.getIdioma());
 	}
 	
 	@Test
 	void testSetJugadorCorrecto() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un jugador con todos los campos válidos*/
+		/*Creamos un jugador con todos los campos vï¿½lidos*/
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
 		int edadValida = 20;
-		String idiomaValido = "Español";
+		String idiomaValido = "Espaï¿½ol";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -56,7 +56,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Pep";
 		int edadValida = 20;
-		String idiomaValido = "Español";
+		String idiomaValido = "Espaï¿½ol";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -77,7 +77,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "";
 		int edadValida = 20;
-		String idiomaValido = "Español";
+		String idiomaValido = "Espaï¿½ol";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -98,7 +98,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
 		int edadValida = 5;
-		String idiomaValido = "Español";
+		String idiomaValido = "Espaï¿½ol";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -109,7 +109,7 @@ class AsignarEquipoTest{
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
 		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
-		assertEquals(0, jugadorGuardado.getEdad());
+		assertEquals(-1, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
 	@Test
@@ -118,7 +118,7 @@ class AsignarEquipoTest{
 		//Creamos el jugador con la edad vacia
 		Jugador jugador = new Jugador();
 		String nombrevalido = "";
-		String idiomaValido = "Español";
+		String idiomaValido = "Espaï¿½ol";
 		jugador.setNombreJugador(nombrevalido);
 		
 		jugador.setIdioma(idiomaValido);
@@ -129,7 +129,7 @@ class AsignarEquipoTest{
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
 		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
-		assertEquals(0, jugadorGuardado.getEdad());
+		assertEquals(-1, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
 	@Test
@@ -160,7 +160,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
 		int edadValida = 20;
-		String idiomaValido = "Brasileño";
+		String idiomaValido = "Brasileï¿½o";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -209,7 +209,7 @@ class AsignarEquipoTest{
 		asignarEquipo.setEquipo(equipo);
 		assertNotNull(equipoGuardado);
 		assertEquals(null, equipoGuardado.getNombreEquipo());
-		assertEquals(0, equipoGuardado.getRanking());
+		assertEquals(-1, equipoGuardado.getRanking());
 	}
 	@Test
 	void testSetEquipoNombreVacio() {
@@ -257,7 +257,7 @@ class AsignarEquipoTest{
 		asignarEquipo.setEquipo(equipo);
 		assertNotNull(equipoGuardado);
 		assertEquals(nombrevalido, equipoGuardado.getNombreEquipo());
-		assertEquals(0, equipoGuardado.getRanking());
+		assertEquals(-1, equipoGuardado.getRanking());
 	}
 	@Test
 	void testSetEquipoRankingIncorrecto() {
@@ -273,7 +273,7 @@ class AsignarEquipoTest{
 		asignarEquipo.setEquipo(equipo);
 		assertNotNull(equipoGuardado);
 		assertEquals(nombrevalido, equipoGuardado.getNombreEquipo());
-		assertEquals(0, equipoGuardado.getRanking());
+		assertEquals(-1, equipoGuardado.getRanking());
 	}
 	
 }
