@@ -26,9 +26,6 @@ public class Equipo {
 		String R2 = "Segunda";
 		String R3 = "Tercera";
 
-		if(ranking > 10) {
-			this.ranking = -1;
-		}
 		if(ranking <= 10 && ranking >= 7) {
 			R1 = "primera";
 			this.ranking = ranking;
@@ -38,7 +35,7 @@ public class Equipo {
 		}else if(ranking >= 0 && ranking <= 3) {
 			R3 = "Tercera";
 			this.ranking = ranking;
-		}else if(ranking < 0);{
+		}else{
 			this.ranking = -1;
 		}
 	}

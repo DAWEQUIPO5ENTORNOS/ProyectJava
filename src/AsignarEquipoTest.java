@@ -9,22 +9,14 @@ class AsignarEquipoTest{
 		
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos vacios*/
-		Jugador jugador = new Jugador();
-		String nombrevalido = "";
-		int edadValida = 0;
-		String idiomaValido = "";
-		jugador.setNombreJugador(nombrevalido);
-		jugador.setEdad(edadValida);
-		jugador.setIdioma(idiomaValido);
+		Jugador jugador = null;
 		
 		/*Asignar el jugador creado en asignar equipo*/
 		asignarEquipo.setJugador(jugador);
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
-		assertNotNull(jugadorGuardado);
-		assertEquals(null, jugadorGuardado.getNombreJugador());
-		assertEquals(-1, jugadorGuardado.getEdad());
-		assertEquals(null, jugadorGuardado.getIdioma());
+		assertNull(jugadorGuardado);
+		
 	}
 	
 	@Test
@@ -34,7 +26,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
 		int edadValida = 20;
-		String idiomaValido = "Espa�ol";
+		String idiomaValido = "Espanol";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -56,7 +48,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Pep";
 		int edadValida = 20;
-		String idiomaValido = "Espa�ol";
+		String idiomaValido = "Espanol";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -77,7 +69,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "";
 		int edadValida = 20;
-		String idiomaValido = "Espa�ol";
+		String idiomaValido = "Espanol";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -98,7 +90,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
 		int edadValida = 5;
-		String idiomaValido = "Espa�ol";
+		String idiomaValido = "Espanol";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -117,10 +109,11 @@ class AsignarEquipoTest{
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el jugador con la edad vacia
 		Jugador jugador = new Jugador();
-		String nombrevalido = "";
-		String idiomaValido = "Espa�ol";
+		String nombrevalido = "Antonio";
+		int edadValida = -1;
+		String idiomaValido = "Espanol";
 		jugador.setNombreJugador(nombrevalido);
-		
+		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
 		
 		/*Asignar el jugador creado en asignar equipo*/
@@ -139,7 +132,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
 		int edadValida = 20;
-		String idiomaValido = "";
+		String idiomaValido = null;
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -160,7 +153,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Antonio";
 		int edadValida = 20;
-		String idiomaValido = "Brasile�o";
+		String idiomaValido = "Brasileno";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
