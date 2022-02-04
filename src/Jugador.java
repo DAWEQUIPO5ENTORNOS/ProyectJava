@@ -14,6 +14,7 @@ public class Jugador {
 		if(ntemp != null) {
 			if (ntemp.length()>=4 && ntemp.length()<=20) {
 				if (ntemp.matches("[a-zA-Z]+")){
+						
 					this.nombre=nombre;
 				}else {
 					this.nombre=null;
@@ -27,14 +28,13 @@ public class Jugador {
 	}
 
 	public void setEdad(int edad) {
-
-		if (edad>18) {
+		
+		this.edad= -1;
+		
+		if (edad>=18) {
 
 			this.edad=edad;
 
-		}else{
-
-			this.edad= -1;
 		}
 	}
 	public void setIdioma(String idioma) {
@@ -63,4 +63,21 @@ public class Jugador {
 	public int getEdad() {
 		return edad;
 	}
+	
+	public String tipoJugador(int edad) {
+		String tipo = null;
+		if(this.nombre != null && this.idioma != null) {
+			if (edad >= 18 && edad <= 25) {
+				tipo = "Junior";
+			}else if(edad > 25 && edad <= 35) {
+				tipo = "Senior";
+			}else if (edad > 35) {
+				tipo = "Master";
+			}else {
+				tipo = null;
+			}
+		}
+		return tipo;
+	}
+	
 }
