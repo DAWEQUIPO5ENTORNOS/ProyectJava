@@ -34,13 +34,13 @@ public class Equipo {
 
 	public String categoriaEquipo(int ranking){
 		if(ranking <= 10 && ranking >= 7) {
-			this.ranking = "primera";
+			return "primera";
 		}else if(ranking > 3 && ranking <= 6) {
-			this.ranking ="Segunda";
+			return "Segunda";
 		}else if(ranking >= 0 && ranking <= 3) {
-			this.ranking = "Tercera";
+			return "Tercera";
 		}else{
-			this.ranking = -1;
+			return null;
 		}
 	}
 	public String getNombreEquipo() {
