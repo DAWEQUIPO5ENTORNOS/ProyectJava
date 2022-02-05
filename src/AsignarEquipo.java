@@ -16,7 +16,7 @@ public class AsignarEquipo {
 			this.equipo.setRanking(equipo.getRanking());
 			
 		}else {
-			this.jugador = null;
+			this.equipo = null;
 		}
 	}
 

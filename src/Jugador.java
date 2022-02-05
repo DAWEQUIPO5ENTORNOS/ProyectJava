@@ -13,11 +13,8 @@ public class Jugador {
 		String ntemp = nombre;
 		if(ntemp != null) {
 			if (ntemp.length()>=4 && ntemp.length()<=20) {
-				if (ntemp.matches("[a-zA-Z]+")){
-						
-					this.nombre=nombre;
-				}else {
-					this.nombre=null;
+				if (ntemp.matches("[a-zA-Z]+")){		
+					this.nombre=nombre.toUpperCase();
 				}
 			}
 		}else{
@@ -40,13 +37,13 @@ public class Jugador {
 	public void setIdioma(String idioma) {
 		String idiomaM = "";
 		idiomaM = idioma;
+		this.idioma = null;
 		if(idiomaM != null) {
-			idiomaM = idioma.toUpperCase();
-			if(idiomaM.equals("INGLES") || idiomaM.equals("ESPANOL") || idiomaM.equals("FRANCES") || idiomaM.equals("ALEMAN")) {
-				this.idioma = idioma;
-			}else {
-				this.idioma = null;
-			}
+		idiomaM = idioma.toUpperCase();
+		if(idiomaM.equals("INGLES") || idiomaM.equals("ESPANOL") || idiomaM.equals("FRANCES") || idiomaM.equals("ALEMAN")) {
+			this.idioma = idioma;
+		}
+
 		}else {
 			this.idioma = null;
 		}
@@ -67,14 +64,14 @@ public class Jugador {
 	public String tipoJugador(int edad) {
 		String tipo = null;
 		if(this.nombre != null && this.idioma != null) {
-			if (edad >= 18 && edad <= 25) {
+			if(edad >= 101) {
+				tipo = "SuperMaster";
+			}else if (edad >= 18 && edad <= 25) {
 				tipo = "Junior";
 			}else if(edad > 25 && edad <= 35) {
 				tipo = "Senior";
-			}else if (edad > 35) {
+			} if (edad > 35 && edad < 101) {
 				tipo = "Master";
-			}else {
-				tipo = null;
 			}
 		}
 		return tipo;

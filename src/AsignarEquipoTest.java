@@ -36,7 +36,7 @@ class AsignarEquipoTest{
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido.toUpperCase(), jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -100,7 +100,7 @@ class AsignarEquipoTest{
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido.toUpperCase(), jugadorGuardado.getNombreJugador());
 		assertEquals(-1, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -121,7 +121,7 @@ class AsignarEquipoTest{
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido.toUpperCase(), jugadorGuardado.getNombreJugador());
 		assertEquals(-1, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -142,7 +142,7 @@ class AsignarEquipoTest{
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido.toUpperCase(), jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(null, jugadorGuardado.getIdioma());
 	}
@@ -163,7 +163,7 @@ class AsignarEquipoTest{
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido.toUpperCase(), jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(null, jugadorGuardado.getIdioma());
 	}
@@ -174,15 +174,16 @@ class AsignarEquipoTest{
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el equipo correcto
 		Equipo equipo = new Equipo();
-		String nombrevalido = "DAW.FC";
+		String nombrevalido = "DAWFC";
 		int rankingValido = 10;
 		equipo.setNombreEquipo(nombrevalido);
 		equipo.setRanking(rankingValido);
 		/*Asignar el equipo creado en asignar equipo*/
-		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
 		asignarEquipo.setEquipo(equipo);
+		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
+		
 		assertNotNull(equipoGuardado);
-		assertEquals(nombrevalido, equipoGuardado.getNombreEquipo());
+		assertEquals(nombrevalido.toUpperCase(), equipoGuardado.getNombreEquipo());
 		assertEquals(rankingValido, equipoGuardado.getRanking());
 		
 	}
@@ -192,30 +193,25 @@ class AsignarEquipoTest{
 		
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el equipo vacio
-		Equipo equipo = new Equipo();
-		String nombrevalido = "";
-		int rankingValido = 0;
-		equipo.setNombreEquipo(nombrevalido);
-		equipo.setRanking(rankingValido);
+		Equipo equipo = null;
 		/*Asignar el equipo creado en asignar equipo*/
-		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
 		asignarEquipo.setEquipo(equipo);
-		assertNotNull(equipoGuardado);
-		assertEquals(null, equipoGuardado.getNombreEquipo());
-		assertEquals(-1, equipoGuardado.getRanking());
+		Equipo equipoGuardado = asignarEquipo.getEquipo();
+		assertNull(equipoGuardado);
 	}
 	@Test
 	void testSetEquipoNombreVacio() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el equipo con el nombre vacio
 		Equipo equipo = new Equipo();
-		String nombrevalido = "";
+		String nombrevalido = null;
 		int rankingValido = 10;
 		equipo.setNombreEquipo(nombrevalido);
 		equipo.setRanking(rankingValido);
 		/*Asignar el equipo creado en asignar equipo*/
-		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
+		 
 		asignarEquipo.setEquipo(equipo);
+		Equipo equipoGuardado = asignarEquipo.getEquipo();
 		assertNotNull(equipoGuardado);
 		assertEquals(null, equipoGuardado.getNombreEquipo());
 		assertEquals(rankingValido, equipoGuardado.getRanking());
@@ -230,8 +226,8 @@ class AsignarEquipoTest{
 		equipo.setNombreEquipo(nombrevalido);
 		equipo.setRanking(rankingValido);
 		/*Asignar el equipo creado en asignar equipo*/
-		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
 		asignarEquipo.setEquipo(equipo);
+		Equipo equipoGuardado = asignarEquipo.getEquipo();
 		assertNotNull(equipoGuardado);
 		assertEquals(null, equipoGuardado.getNombreEquipo());
 		assertEquals(rankingValido, equipoGuardado.getRanking());
@@ -241,31 +237,31 @@ class AsignarEquipoTest{
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el equipo con el ranking vacio
 		Equipo equipo = new Equipo();
-		String nombrevalido = "DAW.FC";
+		String nombrevalido = "DAWFC";
 		
 		equipo.setNombreEquipo(nombrevalido);
 		
 		/*Asignar el equipo creado en asignar equipo*/
-		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
 		asignarEquipo.setEquipo(equipo);
+		Equipo equipoGuardado = asignarEquipo.getEquipo();
 		assertNotNull(equipoGuardado);
-		assertEquals(nombrevalido, equipoGuardado.getNombreEquipo());
-		assertEquals(-1, equipoGuardado.getRanking());
+		assertEquals(nombrevalido.toUpperCase(), equipoGuardado.getNombreEquipo());
+		assertEquals(0, equipoGuardado.getRanking());
 	}
 	@Test
 	void testSetEquipoRankingIncorrecto() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el equipo con el ranking incorrecto
 		Equipo equipo = new Equipo();
-		String nombrevalido = "DAW.FC";
+		String nombrevalido = "DAWFC";
 		int rankingValido = -1;
 		equipo.setNombreEquipo(nombrevalido);
 		equipo.setRanking(rankingValido);
 		/*Asignar el equipo creado en asignar equipo*/
-		Equipo equipoGuardado = asignarEquipo.getEquipo(); 
 		asignarEquipo.setEquipo(equipo);
+		Equipo equipoGuardado = asignarEquipo.getEquipo();
 		assertNotNull(equipoGuardado);
-		assertEquals(nombrevalido, equipoGuardado.getNombreEquipo());
+		assertEquals(nombrevalido.toUpperCase(), equipoGuardado.getNombreEquipo());
 		assertEquals(-1, equipoGuardado.getRanking());
 	}
 	

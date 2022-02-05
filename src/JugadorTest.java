@@ -32,7 +32,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANU";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador,jugador.getNombreJugador());
+		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
 
 	//Nombre con más de 4 caracteres
@@ -41,7 +41,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUEL";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador, jugador.getNombreJugador());
+		assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador());
 	}
 
 	//Nombre con menos de 20 caracteres
@@ -50,7 +50,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUEL";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador,jugador.getNombreJugador());
+		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
 
 	//Nombre con 20 caracteres
@@ -59,7 +59,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUELAGARRIDOABIEGO";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador,jugador.getNombreJugador());
+		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
 
 	//Nombre con más de 20 caracteres
@@ -155,4 +155,19 @@ class JugadorTest {
 		assertEquals("Master",jugador.tipoJugador(jugador.getEdad()));
 
 	}
+	
+	//Tipo SuperMaster
+		@Test
+		void testtipoSuperMaster() {
+			Jugador jugador = new Jugador();
+			String nombreJugador = "MANU";
+			int edadJugador = 101;
+			String idiomaValido = "Espanol";
+			jugador.setNombreJugador(nombreJugador);
+			jugador.setEdad(edadJugador);
+			jugador.setIdioma(idiomaValido);
+			assertNotNull(jugador);
+			assertEquals("SuperMaster",jugador.tipoJugador(jugador.getEdad()));
+
+		}
 }
