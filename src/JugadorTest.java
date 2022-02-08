@@ -109,7 +109,7 @@ class JugadorTest {
 		int edadJugador = 15;
 		jugador.setEdad(edadJugador);
 
-		assertEquals(null,jugador.tipoJugador(jugador.getEdad()));
+		assertEquals(null,jugador.tipoJugador());
 	}
 
 	//Tipo Junior
@@ -123,7 +123,7 @@ class JugadorTest {
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaValido);
 		assertNotNull(jugador);
-		assertEquals("Junior",jugador.tipoJugador(jugador.getEdad()));
+		assertEquals("Junior",jugador.tipoJugador());
 
 	}
 
@@ -138,7 +138,7 @@ class JugadorTest {
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaValido);
 		assertNotNull(jugador);
-		assertEquals("Senior",jugador.tipoJugador(jugador.getEdad()));
+		assertEquals("Senior",jugador.tipoJugador());
 
 	}
 	//Tipo Master
@@ -152,7 +152,7 @@ class JugadorTest {
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaValido);
 		assertNotNull(jugador);
-		assertEquals("Master",jugador.tipoJugador(jugador.getEdad()));
+		assertEquals("Master",jugador.tipoJugador());
 
 	}
 	
@@ -167,7 +167,7 @@ class JugadorTest {
 			jugador.setEdad(edadJugador);
 			jugador.setIdioma(idiomaValido);
 			assertNotNull(jugador);
-			assertEquals("SuperMaster",jugador.tipoJugador(jugador.getEdad()));
+			assertEquals("SuperMaster",jugador.tipoJugador());
 
 		}
 }

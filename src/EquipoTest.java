@@ -58,30 +58,36 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		int RankingValido = -1;
 		equipo.setRanking(RankingValido);
-		assertEquals(null , equipo.categoriaEquipo(equipo.getRanking()));
+		assertEquals(null , equipo.categoriaEquipo());
 	}
 	
 	@Test
 	void testSetPrimeraCategoria () {
 		Equipo equipo = new Equipo();
+		String NombreEquipoValido = "dawfc";
 		int RankingValido = 10;
+		equipo.setNombreEquipo(NombreEquipoValido);
 		equipo.setRanking(RankingValido);
-		assertEquals("Primera" , equipo.categoriaEquipo(equipo.getRanking()));
+		assertEquals("Primera" , equipo.categoriaEquipo());
 	}
 	
 	@Test
 	void testSetSegundaCategoria () {
 		Equipo equipo = new Equipo();
+		String NombreEquipoValido = "dawfc";
 		int RankingValido = 5;
+		equipo.setNombreEquipo(NombreEquipoValido);
 		equipo.setRanking(RankingValido);
-		assertEquals("Segunda" , equipo.categoriaEquipo(equipo.getRanking()));
+		assertEquals("Segunda" , equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetTerceraCategoria () {
 		Equipo equipo = new Equipo();
+		String NombreEquipoValido = "dawfc";
+		equipo.setNombreEquipo(NombreEquipoValido);
 		int RankingValido = 2;
 		equipo.setRanking(RankingValido);
-		assertEquals("Tercera", equipo.categoriaEquipo(equipo.getRanking()));
+		assertEquals("Tercera", equipo.categoriaEquipo());
 	}
 	
 		

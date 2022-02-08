@@ -4,17 +4,14 @@ public class Equipo {
 	private int ranking;
 
 
-	public Equipo () {
-	}
+	public Equipo () {}
 
 
 	public void setNombreEquipo(String nombreEquipo) {
 		if (nombreEquipo != null){
 			if (nombreEquipo.length()>=4 && nombreEquipo.length()<=20) {
-				for (int i=0; i <nombreEquipo.length();i++) {
-					if (nombreEquipo.matches("[a-zA-Z]+")){
-						this.nombreEquipo=nombreEquipo.toUpperCase();
-					}
+				if (nombreEquipo.matches("[a-zA-Z]+")){
+					this.nombreEquipo=nombreEquipo.toUpperCase();
 				}
 			}else{
 				this.nombreEquipo= null;
@@ -30,16 +27,20 @@ public class Equipo {
 		}
 	}
 
-	public String categoriaEquipo(int ranking){
-		if(ranking < 11 && ranking >= 7) {
-			return "Primera";
-		}else if(ranking >= 3 && ranking <= 6) {
-			return "Segunda";
-		}else if(ranking >= 0 && ranking < 3) {
-			return "Tercera";
-		}else{
-			return null;
+	public String categoriaEquipo(){
+		int ranking = this.ranking;
+		String nombre = this.nombreEquipo;
+		String categoria= null;
+		if(nombre!= null && ranking != -1){
+			if(ranking < 11 && ranking >= 7) {
+				categoria = "Primera";
+			}else if(ranking >= 3 && ranking <= 6) {
+				categoria = "Segunda";
+			}else if(ranking >= 0 && ranking < 3) {
+				categoria = "Tercera";
+			}
 		}
+		return categoria;
 	}
 	public String getNombreEquipo() {
 		return nombreEquipo;
