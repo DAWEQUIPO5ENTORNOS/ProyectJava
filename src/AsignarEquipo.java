@@ -1,8 +1,9 @@
 
+
 public class AsignarEquipo {
 	private Equipo equipo;
 	private Jugador jugador;
-
+	static int  noValido = -1;
 
 	public AsignarEquipo() {
 
@@ -10,28 +11,24 @@ public class AsignarEquipo {
 
 	public void setEquipo(Equipo equipo) {
 		//code here
-		if(equipo != null) {
+		this.equipo = null;
+		if(equipo != null && equipo.getNombreEquipo() != null && equipo.getRanking() != noValido ) {
 			this.equipo = new Equipo();
 			this.equipo.setNombreEquipo(equipo.getNombreEquipo());
 			this.equipo.setRanking(equipo.getRanking());
-			
-		}else {
-			this.equipo = null;
 		}
+		
 	}
 
 	public void setJugador(Jugador jugador) {
 		//code here
-
-		if(jugador != null) {
+		this.jugador = null;
+		if(jugador != null && jugador.getNombreJugador() != null && jugador.getEdad()!= noValido && jugador.getIdioma() != null ) {
 			this.jugador = new Jugador();
 			this.jugador.setNombreJugador(jugador.getNombreJugador());
 			this.jugador.setEdad(jugador.getEdad());
 			this.jugador.setIdioma(jugador.getIdioma());
-		}else {
-			this.jugador = null;
 		}
-
 	}
 
 	public Equipo getEquipo(){

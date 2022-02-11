@@ -5,7 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class JugadorTest {
-
+	static int minTamaño = 4;
+	static int maxTamaño = 20;
+	static int minEdad = 18;
+	static int maxEdadJunior = 25;
+	static int maxEdadSenior = 35;
+	static int maxEdadMaster = 100;
+	static int  noValido = -1;
+	
 	//*****************PRUEBAS CON NOMBRE
 
 	//Nombre con 0 caracteres

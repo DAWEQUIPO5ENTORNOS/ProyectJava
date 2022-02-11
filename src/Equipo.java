@@ -2,27 +2,33 @@
 public class Equipo {
 	private String nombreEquipo;
 	private int ranking;
-
-
+	static int minTamaño = 4;
+	static int maxTamaño = 20;
+	static int minRanking = 0;
+	static int maxRanking = 10;
+	static int minPrimera = 7;
+	static int maxSegunda = 6;
+	static int minSegunda = 3;
+	static int minTercera = 0;
+	static int  noValido = -1;
+	
+	
 	public Equipo () {}
 
 
 	public void setNombreEquipo(String nombreEquipo) {
+		this.nombreEquipo= null;
 		if (nombreEquipo != null){
-			if (nombreEquipo.length()>=4 && nombreEquipo.length()<=20) {
+			if (nombreEquipo.length()>=minTamaño && nombreEquipo.length()<=maxTamaño) {
 				if (nombreEquipo.matches("[a-zA-Z]+")){
 					this.nombreEquipo=nombreEquipo.toUpperCase();
 				}
-			}else{
-				this.nombreEquipo= null;
 			}
-		}else{
-			this.nombreEquipo= null;
 		}
 	}
 	public void setRanking(int ranking) {
-		this.ranking = -1;
-		if(ranking >= 0 && ranking <=10){
+		this.ranking = noValido;
+		if(ranking >= minRanking && ranking <=maxRanking){
 			this.ranking = ranking;
 		}
 	}
@@ -31,12 +37,12 @@ public class Equipo {
 		int ranking = this.ranking;
 		String nombre = this.nombreEquipo;
 		String categoria= null;
-		if(nombre!= null && ranking != -1){
-			if(ranking < 11 && ranking >= 7) {
+		if(nombre!= null && ranking != noValido){
+			if(ranking <= maxRanking && ranking >= minPrimera) {
 				categoria = "Primera";
-			}else if(ranking >= 3 && ranking <= 6) {
+			}else if(ranking >= minSegunda && ranking <= maxSegunda) {
 				categoria = "Segunda";
-			}else if(ranking >= 0 && ranking < 3) {
+			}else if(ranking >= minTercera && ranking < minSegunda) {
 				categoria = "Tercera";
 			}
 		}

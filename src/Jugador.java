@@ -3,7 +3,13 @@ public class Jugador {
 	private String nombre;
 	private int edad;
 	private String idioma;
-
+	static int minTamaño = 4;
+	static int maxTamaño = 20;
+	static int minEdad = 18;
+	static int maxEdadJunior = 25;
+	static int maxEdadSenior = 35;
+	static int maxEdadMaster = 100;
+	static int  noValido = -1;
 	public Jugador () {
 
 	}
@@ -24,7 +30,7 @@ public class Jugador {
 
 	public void setEdad(int edad) {
 		this.edad= -1;
-		if (edad>=18) {
+		if (edad>=minEdad) {
 			this.edad=edad;
 		}
 	}
@@ -34,7 +40,10 @@ public class Jugador {
 		this.idioma = null;
 		if(idiomaM != null) {
 			idiomaM = idioma.toUpperCase();
-			if(idiomaM.equals("INGLES") || idiomaM.equals("ESPANOL") || idiomaM.equals("FRANCES") || idiomaM.equals("ALEMAN")) {
+			if(idiomaM.equals("INGLES")
+				|| idiomaM.equals("ESPANOL")
+				|| idiomaM.equals("FRANCES")
+				|| idiomaM.equals("ALEMAN")) {
 				this.idioma = idioma;
 			}
 		}
@@ -58,11 +67,11 @@ public class Jugador {
 		if(this.nombre != null && this.idioma != null) {
 			if(edad >= 101) {
 				tipo = "SuperMaster";
-			}else if (edad >= 18 && edad <= 25) {
+			}else if (edad >= minEdad && edad <= maxEdadJunior) {
 				tipo = "Junior";
-			}else if(edad > 25 && edad <= 35) {
+			}else if(edad > maxEdadJunior && edad <= maxEdadSenior) {
 				tipo = "Senior";
-			} else if (edad > 35 && edad < 101) {
+			} else if (edad > maxEdadSenior && edad <= maxEdadMaster) {
 				tipo = "Master";
 			}
 		}
