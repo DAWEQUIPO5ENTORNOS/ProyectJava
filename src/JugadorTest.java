@@ -11,7 +11,7 @@ class JugadorTest {
 	static int maxEdadJunior = 25;
 	static int maxEdadSenior = 35;
 	static int maxEdadMaster = 100;
-	static int  noValido = -1;
+	static int noValido = -1;
 	
 	//*****************PRUEBAS CON NOMBRE
 
@@ -121,7 +121,7 @@ class JugadorTest {
 
 	//Tipo Junior
 	@Test
-	void testtipoJunior() {
+	void testtipoJuniorValido() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANU";
 		int edadJugador = 18;
@@ -136,7 +136,7 @@ class JugadorTest {
 	
 	//JuniorNombre con 0 caracteres
 		@Test 
-		void testSetNombreJugadorInvalidVacio() {
+		void testSetJuniorNombreJugadorInvalidVacio() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "";
 			jugador.setNombreJugador(nombreJugador);
@@ -145,7 +145,7 @@ class JugadorTest {
 
 		//JuniorNombre con menos de 4 caracteres
 		@Test 
-		void testSetNombreJugadorInvalidInsufCaracteres() {
+		void testSetJuniorNombreJugadorInvalidInsufCaracteres() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "ZOÉ";
 			jugador.setNombreJugador(nombreJugador);
@@ -154,7 +154,7 @@ class JugadorTest {
 
 		//JuniorNombre con 4 caracteres
 		@Test 
-		void testSetNombreJugadorValidoSufCaracteres() {
+		void testSetJuniorNombreJugadorValidoSufCaracteres() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANU";
 			jugador.setNombreJugador(nombreJugador);
@@ -163,7 +163,7 @@ class JugadorTest {
 
 		//JuniorNombre con más de 4 caracteres
 		@Test 
-		void testSetNombreJugadorValido() {
+		void testSetJuniorNombreJugadorValido() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANUEL";
 			jugador.setNombreJugador(nombreJugador);
@@ -172,7 +172,7 @@ class JugadorTest {
 
 		//JuniorNombre con menos de 20 caracteres
 		@Test 
-		void testSetNombreJugadorValido2() {
+		void testSetJuniorNombreJugadorValido2() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANUEL";
 			jugador.setNombreJugador(nombreJugador);
@@ -181,7 +181,7 @@ class JugadorTest {
 
 		//JuniorNombre con 20 caracteres
 		@Test 
-		void testSetNombreJugadorValidoMaximoCaracteres() {
+		void testSetJuniorNombreJugadorValidoMaximoCaracteres() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANUELAGARRIDOABIEGO";
 			jugador.setNombreJugador(nombreJugador);
@@ -190,7 +190,7 @@ class JugadorTest {
 
 		//JuniorNombre con más de 20 caracteres
 		@Test 
-		void testSetNombreJugadorInvalidoMaximoCaracteres() {
+		void testSetJuniorNombreJugadorInvalidoMaximoCaracteres() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANUELA CASTAÑO SANCHEZ ";
 			jugador.setNombreJugador(nombreJugador);
@@ -199,7 +199,7 @@ class JugadorTest {
 
 		//JuniorEdad INT < 18
 		@Test
-		void testSetEdadInvMaximo () {
+		void testSetJuniorEdadInvMaximo () {
 			Jugador jugador = new Jugador();
 			int edadJugador = 15;
 			jugador.setEdad(edadJugador);
@@ -208,7 +208,7 @@ class JugadorTest {
 
 		//JuniorEdad con INT = 18
 		@Test
-		void testSetEdadValidoMinimo () {
+		void testSetJuniorEdadValidoMinimo () {
 			Jugador jugador = new Jugador();
 			int edadJugador = 18;
 			jugador.setEdad(edadJugador);
@@ -217,7 +217,7 @@ class JugadorTest {
 
 		//JuniorEdad con INT > 18
 		@Test
-		void testSetEdadValido () {
+		void testSetJuniorEdadValido () {
 			Jugador jugador = new Jugador();
 			int edadJugador = 21;
 			jugador.setEdad(edadJugador);
@@ -225,7 +225,7 @@ class JugadorTest {
 		}
 		//JuniorEdad con INT = 24
 		@Test
-		void testSetEdadValidoMinimo () {
+		void testSetJuniorrEdadValidoMinimo () {
 			Jugador jugador = new Jugador();
 			int edadJugador = 24;
 			jugador.setEdad(edadJugador);
@@ -250,7 +250,7 @@ class JugadorTest {
 	
 	//SeniorNombre con 0 caracteres
 	@Test 
-	void testSetNombreJugadorInvalidVacio() {
+	void testSetSeniorNombreJugadorInvalidVacio() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "";
 		jugador.setNombreJugador(nombreJugador);
@@ -259,7 +259,7 @@ class JugadorTest {
 
 	//SeniorNombre con menos de 4 caracteres
 	@Test 
-	void testSetNombreJugadorInvalidInsufCaracteres() {
+	void testSetSeniorNombreJugadorInvalidInsufCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ZOÉ";
 		jugador.setNombreJugador(nombreJugador);
@@ -268,7 +268,7 @@ class JugadorTest {
 
 	//SeniorNombre con 4 caracteres
 	@Test 
-	void testSetNombreJugadorValidoSufCaracteres() {
+	void testSetSeniorNombreJugadorValidoSufCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANU";
 		jugador.setNombreJugador(nombreJugador);
@@ -277,7 +277,7 @@ class JugadorTest {
 
 	//SeniorNombre con más de 4 caracteres
 	@Test 
-	void testSetNombreJugadorValido() {
+	void testSetSeniorNombreJugadorValido() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUEL";
 		jugador.setNombreJugador(nombreJugador);
@@ -286,7 +286,7 @@ class JugadorTest {
 
 	//SeniorNombre con menos de 20 caracteres
 	@Test 
-	void testSetNombreJugadorValido2() {
+	void testSetSeniorNombreJugadorValido2() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUEL";
 		jugador.setNombreJugador(nombreJugador);
@@ -295,7 +295,7 @@ class JugadorTest {
 
 	//SeniorNombre con 20 caracteres
 	@Test 
-	void testSetNombreJugadorValidoMaximoCaracteres() {
+	void testSetSeniorNombreJugadorValidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUELAGARRIDOABIEGO";
 		jugador.setNombreJugador(nombreJugador);
@@ -304,7 +304,7 @@ class JugadorTest {
 
 	//SeniorNombre con más de 20 caracteres
 	@Test 
-	void testSetNombreJugadorInvalidoMaximoCaracteres() {
+	void testSetSeniorNombreJugadorInvalidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUELA CASTAÑO SANCHEZ ";
 		jugador.setNombreJugador(nombreJugador);
@@ -313,7 +313,7 @@ class JugadorTest {
 
 	//SeniorEdad con INT = 25
 	@Test
-	void testSetEdadValidoMinimo () {
+	void testSetSeniorEdadValidoMinimo () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 25;
 		jugador.setEdad(edadJugador);
@@ -322,7 +322,7 @@ class JugadorTest {
 
 	//SeniorEdad con INT > 25
 	@Test
-	void testSetEdadValido () {
+	void testSetSeniorEdadValido () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 26;
 		jugador.setEdad(edadJugador);
@@ -330,7 +330,7 @@ class JugadorTest {
 	}
 	//SeniorEdad con INT = 34
 	@Test
-	void testSetEdadValidoMinimo () {
+	void testSetSeniorrEdadValidoMinimo () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 34;
 		jugador.setEdad(edadJugador);
@@ -355,7 +355,7 @@ class JugadorTest {
 	
 	//MasterNombre con 0 caracteres
 	@Test 
-	void testSetNombreJugadorInvalidVacio() {
+	void testSetMasterNombreJugadorInvalidVacio() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "";
 		jugador.setNombreJugador(nombreJugador);
@@ -364,7 +364,7 @@ class JugadorTest {
 
 	//MasterNombre con menos de 4 caracteres
 	@Test 
-	void testSetNombreJugadorInvalidInsufCaracteres() {
+	void testSetMasterNombreJugadorInvalidInsufCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ZOÉ";
 		jugador.setNombreJugador(nombreJugador);
@@ -373,7 +373,7 @@ class JugadorTest {
 
 	//MasterNombre con 4 caracteres
 	@Test 
-	void testSetNombreJugadorValidoSufCaracteres() {
+	void testSetMasterNombreJugadorValidoSufCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANU";
 		jugador.setNombreJugador(nombreJugador);
@@ -382,7 +382,7 @@ class JugadorTest {
 
 	//MasterNombre con más de 4 caracteres
 	@Test 
-	void testSetNombreJugadorValido() {
+	void testSetMasterNombreJugadorValido() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUEL";
 		jugador.setNombreJugador(nombreJugador);
@@ -391,7 +391,7 @@ class JugadorTest {
 
 	//MasterNombre con menos de 20 caracteres
 	@Test 
-	void testSetNombreJugadorValido2() {
+	void testSetMasterNombreJugadorValido2() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUEL";
 		jugador.setNombreJugador(nombreJugador);
@@ -400,7 +400,7 @@ class JugadorTest {
 
 	//MasterNombre con 20 caracteres
 	@Test 
-	void testSetNombreJugadorValidoMaximoCaracteres() {
+	void testSetMasterNombreJugadorValidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUELAGARRIDOABIEGO";
 		jugador.setNombreJugador(nombreJugador);
@@ -409,7 +409,7 @@ class JugadorTest {
 
 	//MasterNombre con más de 20 caracteres
 	@Test 
-	void testSetNombreJugadorInvalidoMaximoCaracteres() {
+	void testSetMasterNombreJugadorInvalidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANUELA CASTAÑO SANCHEZ ";
 		jugador.setNombreJugador(nombreJugador);
@@ -418,7 +418,7 @@ class JugadorTest {
 
 	//MasterEdad con INT = 35
 	@Test
-	void testSetEdadValidoMinimo () {
+	void testSetMasterEdadValidoMinimo () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 35;
 		jugador.setEdad(edadJugador);
@@ -427,7 +427,7 @@ class JugadorTest {
 
 	//MasterEdad con INT > 35
 	@Test
-	void testSetEdadValido () {
+	void testSetMasterEdadValido () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 36;
 		jugador.setEdad(edadJugador);
@@ -435,7 +435,7 @@ class JugadorTest {
 	}
 	//MasterEdad con INT = 99
 	@Test
-	void testSetEdadValidoMinimo () {
+	void testSetMaasterEdadValidoMinimo () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 99;
 		jugador.setEdad(edadJugador);
@@ -459,7 +459,7 @@ class JugadorTest {
 		
 		//SuperMasterNombre con 0 caracteres
 		@Test 
-		void testSetNombreJugadorInvalidVacio() {
+		void testSetSuperMasterNombreNombreJugadorInvalidVacio() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "";
 			jugador.setNombreJugador(nombreJugador);
@@ -468,7 +468,7 @@ class JugadorTest {
 
 		//SuperMasterNombre con menos de 4 caracteres
 		@Test 
-		void testSetNombreJugadorInvalidInsufCaracteres() {
+		void testSetSuperMasterNombreNombreJugadorInvalidInsufCaracteres() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "ZOÉ";
 			jugador.setNombreJugador(nombreJugador);
@@ -477,7 +477,7 @@ class JugadorTest {
 
 		//SuperMasterNombre con 4 caracteres
 		@Test 
-		void testSetNombreJugadorValidoSufCaracteres() {
+		void testSetSuperMasterNombreNombreJugadorValidoSufCaracteres() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANU";
 			jugador.setNombreJugador(nombreJugador);
@@ -486,7 +486,7 @@ class JugadorTest {
 
 		//SuperMasterNombre con más de 4 caracteres
 		@Test 
-		void testSetNombreJugadorValido() {
+		void testSetSuperMasterNombreNombreJugadorValido() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANUEL";
 			jugador.setNombreJugador(nombreJugador);
@@ -495,7 +495,7 @@ class JugadorTest {
 
 		//SuperMasterNombre con menos de 20 caracteres
 		@Test 
-		void testSetNombreJugadorValido2() {
+		void testSetSuperMasterNombreNombreJugadorValido2() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANUEL";
 			jugador.setNombreJugador(nombreJugador);
@@ -504,7 +504,7 @@ class JugadorTest {
 
 		//SuperMasterNombre con 20 caracteres
 		@Test 
-		void testSetNombreJugadorValidoMaximoCaracteres() {
+		void testSetSuperMasterNombreNombreJugadorValidoMaximoCaracteres() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANUELAGARRIDOABIEGO";
 			jugador.setNombreJugador(nombreJugador);
@@ -513,7 +513,7 @@ class JugadorTest {
 
 		//SuperMasterNombre con más de 20 caracteres
 		@Test 
-		void testSetNombreJugadorInvalidoMaximoCaracteres() {
+		void testSetSuperMasterNombreNombreJugadorInvalidoMaximoCaracteres() {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANUELA CASTAÑO SANCHEZ ";
 			jugador.setNombreJugador(nombreJugador);
@@ -522,7 +522,7 @@ class JugadorTest {
 
 		//SuperMasterEdad con INT = 100
 		@Test
-		void testSetEdadValidoMinimo () {
+		void testSetSuperMasterNombreEdadValidoMinimo () {
 			Jugador jugador = new Jugador();
 			int edadJugador = 100;
 			jugador.setEdad(edadJugador);
@@ -531,10 +531,12 @@ class JugadorTest {
 
 		//SuperMasterEdad con INT > 100
 		@Test
-		void testSetEdadValido () {
+		void testSetSuperMasterNombreEdadValido () {
 			Jugador jugador = new Jugador();
 			int edadJugador = 101;
 			jugador.setEdad(edadJugador);
 			assertEquals(edadJugador,jugador.getEdad());
 
+		}
+		
 }
