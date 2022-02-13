@@ -15,17 +15,19 @@ public class Equipo {
 	
 	public Equipo () {}
 
-
+	//asignamos nombre a la clase si tiene entre 4 y 20 caracteres, sino se pone a null
 	public void setNombreEquipo(String nombreEquipo) {
 		this.nombreEquipo= null;
 		if (nombreEquipo != null){
-			if (nombreEquipo.length()>=minTamaño && nombreEquipo.length()<=maxTamaño) {
+			if (nombreEquipo.length() >= minTamaño && nombreEquipo.length() <= maxTamaño) {
 				if (nombreEquipo.matches("[a-zA-Z]+")){
 					this.nombreEquipo=nombreEquipo.toUpperCase();
 				}
 			}
 		}
 	}
+	
+	//asignamos ranking a la clase si esta entre 0 y 10, si no se pone -1
 	public void setRanking(int ranking) {
 		this.ranking = noValido;
 		if(ranking >= minRanking && ranking <=maxRanking){
@@ -33,6 +35,7 @@ public class Equipo {
 		}
 	}
 
+	//asignamos categoria al equipo en funcion del ranking
 	public String categoriaEquipo(){
 		int ranking = this.ranking;
 		String nombre = this.nombreEquipo;

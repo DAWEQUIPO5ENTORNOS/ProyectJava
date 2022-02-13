@@ -2,8 +2,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+
 class AsignarEquipoTest{
-	
+	static String nombre = "Antonio";
+	static String nombreEquipo = "dawfc";
+	private String idioma = "Espanol";
+	//probamos a asignar un jugador vacio
 	@Test
 	void testSetJugadorVacio() {
 		
@@ -18,15 +22,15 @@ class AsignarEquipoTest{
 		assertNull(jugadorGuardado);
 		
 	}
-	
+	//probamos a asignar un jugador correcto
 	@Test
 	void testSetJugadorCorrecto() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos v�lidos*/
 		Jugador jugador = new Jugador();
-		String nombrevalido = "Antonio";
+		String nombrevalido = nombre;
 		int edadValida = 20;
-		String idiomaValido = "Espanol";
+		String idiomaValido = idioma;
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -37,7 +41,7 @@ class AsignarEquipoTest{
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
 	}
-	
+	//probamos a asignar un jugador con nombre incorrecto
 	@Test
 	void testSetJugadorNombreIncorrecto() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
@@ -45,7 +49,7 @@ class AsignarEquipoTest{
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Pep";
 		int edadValida = 20;
-		String idiomaValido = "Espanol";
+		String idiomaValido = idioma;
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -57,6 +61,7 @@ class AsignarEquipoTest{
 		assertNull(jugadorGuardado);
 		
 	}
+	//probamos a asignar un jugador con nombre vacio
 	@Test
 	void testSetJugadorNombreVacio() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
@@ -76,14 +81,15 @@ class AsignarEquipoTest{
 		assertNull(jugadorGuardado);
 		
 	}
+	//probamos a asignar un jugador con edad invalida
 	@Test
 	void testSetJugadorEdadInvalido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el jugador con la edad incorrecta
 		Jugador jugador = new Jugador();
-		String nombrevalido = "Antonio";
+		String nombrevalido = nombre;
 		int edadValida = 5;
-		String idiomaValido = "Espanol";
+		String idiomaValido = idioma;
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -94,14 +100,15 @@ class AsignarEquipoTest{
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNull(jugadorGuardado);
 	}
+	//probamos a asignar un jugador con edad vacia
 	@Test
 	void testSetJugadorEdadVacia() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el jugador con la edad vacia
 		Jugador jugador = new Jugador();
-		String nombrevalido = "Antonio";
+		String nombrevalido = nombre;
 		int edadValida = -1;
-		String idiomaValido = "Espanol";
+		String idiomaValido = idioma;
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
@@ -112,12 +119,13 @@ class AsignarEquipoTest{
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNull(jugadorGuardado);
 	}
+	//probamos a asignar un jugador con idioma vacio
 	@Test
 	void testSetJugadorIdiomaVacio() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el jugador con el idioma vacio
 		Jugador jugador = new Jugador();
-		String nombrevalido = "Antonio";
+		String nombrevalido = nombre;
 		int edadValida = 20;
 		String idiomaValido = null;
 		jugador.setNombreJugador(nombrevalido);
@@ -130,12 +138,13 @@ class AsignarEquipoTest{
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNull(jugadorGuardado);
 	}
+	//probamos a asignar un jugador con edad invalida
 	@Test
 	void testSetJugadorIdiomaInvalido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el jugador con el idioma invalido
 		Jugador jugador = new Jugador();
-		String nombrevalido = "Antonio";
+		String nombrevalido = nombre;
 		int edadValida = 20;
 		String idiomaValido = "Brasileno";
 		jugador.setNombreJugador(nombrevalido);
@@ -149,13 +158,14 @@ class AsignarEquipoTest{
 		assertNull(jugadorGuardado);
 	}
 	
+	//probamos a asignar un equipo valido
 	@Test
 	void testSetEquipo() {
 		
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el equipo correcto
 		Equipo equipo = new Equipo();
-		String nombrevalido = "DAWFC";
+		String nombrevalido = nombreEquipo;
 		int rankingValido = 10;
 		equipo.setNombreEquipo(nombrevalido);
 		equipo.setRanking(rankingValido);
@@ -167,7 +177,7 @@ class AsignarEquipoTest{
 		
 		
 	}
-	
+	//probamos a asignar un equipo vacio
 	@Test
 	void testSetEquipoVacio() {
 		
@@ -179,6 +189,7 @@ class AsignarEquipoTest{
 		Equipo equipoGuardado = asignarEquipo.getEquipo();
 		assertNull(equipoGuardado);
 	}
+	//probamos a asignar un equipo con nombre vacio
 	@Test
 	void testSetEquipoNombreVacio() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
@@ -194,6 +205,7 @@ class AsignarEquipoTest{
 		Equipo equipoGuardado = asignarEquipo.getEquipo();
 		assertNull(equipoGuardado);
 	}
+	//probamos a asignar un equipo con nombre incorrecto
 	@Test
 	void testSetEquipoNombreIncorrecto() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
@@ -209,12 +221,13 @@ class AsignarEquipoTest{
 		Equipo equipoGuardado = asignarEquipo.getEquipo();
 		assertNull(equipoGuardado);
 	}
+	//probamos a asignar un equipo con ranking vacio
 	@Test
 	void testSetEquipoRankingVacio() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el equipo con el ranking vacio
 		Equipo equipo = new Equipo();
-		String nombrevalido = "DAWFC";
+		String nombrevalido = nombreEquipo;
 		
 		equipo.setNombreEquipo(nombrevalido);
 		
@@ -223,12 +236,13 @@ class AsignarEquipoTest{
 		Equipo equipoGuardado = asignarEquipo.getEquipo();
 		assertNull(equipoGuardado);
 	}
+	//probamos a asignar un equipo con ranking incorrecto
 	@Test
 	void testSetEquipoRankingIncorrecto() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		//Creamos el equipo con el ranking incorrecto
 		Equipo equipo = new Equipo();
-		String nombrevalido = "DAWFC";
+		String nombrevalido = nombreEquipo;
 		int rankingValido = -1;
 		equipo.setNombreEquipo(nombrevalido);
 		equipo.setRanking(rankingValido);

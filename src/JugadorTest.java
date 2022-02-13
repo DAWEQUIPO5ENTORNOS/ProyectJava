@@ -1,18 +1,19 @@
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
 class JugadorTest {
-	static int minTamaño = 4;
-	static int maxTamaño = 20;
+	static int minTamano = 4;
+	static int maxTamano = 20;
 	static int minEdad = 18;
 	static int maxEdadJunior = 25;
 	static int maxEdadSenior = 35;
 	static int maxEdadMaster = 100;
 	static int noValido = -1;
-	
+	static String nombreValido = "Manuel";
+	static String nombreLargo = "MANUELAGARRIDOABIEGO";
+	static String nombreInvLargo = "MANUELA CASTAÑO SANCHEZ ";
+	static String idioma = "Espanol";
 	//*****************PRUEBAS CON NOMBRE
 
 	//Nombre con 0 caracteres
@@ -46,7 +47,7 @@ class JugadorTest {
 	@Test 
 	void testSetNombreJugadorValido() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUEL";
+		String nombreJugador = nombreValido;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador());
 	}
@@ -55,7 +56,7 @@ class JugadorTest {
 	@Test 
 	void testSetNombreJugadorValido2() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUEL";
+		String nombreJugador = nombreValido;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
@@ -64,7 +65,7 @@ class JugadorTest {
 	@Test 
 	void testSetNombreJugadorValidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUELAGARRIDOABIEGO";
+		String nombreJugador = nombreLargo;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
@@ -125,7 +126,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANU";
 		int edadJugador = 18;
-		String idiomaValido = "Espanol";
+		String idiomaValido = idioma;
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaValido);
@@ -165,7 +166,7 @@ class JugadorTest {
 		@Test 
 		void testSetJuniorNombreJugadorValido() {
 			Jugador jugador = new Jugador();
-			String nombreJugador = "MANUEL";
+			String nombreJugador = nombreValido;
 			jugador.setNombreJugador(nombreJugador);
 			assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador());
 		}
@@ -174,7 +175,7 @@ class JugadorTest {
 		@Test 
 		void testSetJuniorNombreJugadorValido2() {
 			Jugador jugador = new Jugador();
-			String nombreJugador = "MANUEL";
+			String nombreJugador = nombreValido;
 			jugador.setNombreJugador(nombreJugador);
 			assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 		}
@@ -183,7 +184,7 @@ class JugadorTest {
 		@Test 
 		void testSetJuniorNombreJugadorValidoMaximoCaracteres() {
 			Jugador jugador = new Jugador();
-			String nombreJugador = "MANUELAGARRIDOABIEGO";
+			String nombreJugador = nombreLargo;
 			jugador.setNombreJugador(nombreJugador);
 			assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 		}
@@ -192,7 +193,7 @@ class JugadorTest {
 		@Test 
 		void testSetJuniorNombreJugadorInvalidoMaximoCaracteres() {
 			Jugador jugador = new Jugador();
-			String nombreJugador = "MANUELA CASTAÑO SANCHEZ ";
+			String nombreJugador = nombreInvLargo;
 			jugador.setNombreJugador(nombreJugador);
 			assertEquals(null,jugador.getNombreJugador());
 		}
@@ -239,7 +240,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANU";
 		int edadJugador = 27;
-		String idiomaValido = "Espanol";
+		String idiomaValido = idioma;
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaValido);
@@ -279,7 +280,7 @@ class JugadorTest {
 	@Test 
 	void testSetSeniorNombreJugadorValido() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUEL";
+		String nombreJugador = nombreValido;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador());
 	}
@@ -288,7 +289,7 @@ class JugadorTest {
 	@Test 
 	void testSetSeniorNombreJugadorValido2() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUEL";
+		String nombreJugador = nombreValido;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
@@ -297,7 +298,7 @@ class JugadorTest {
 	@Test 
 	void testSetSeniorNombreJugadorValidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUELAGARRIDOABIEGO";
+		String nombreJugador = nombreLargo;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
@@ -306,7 +307,7 @@ class JugadorTest {
 	@Test 
 	void testSetSeniorNombreJugadorInvalidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUELA CASTAÑO SANCHEZ ";
+		String nombreJugador = nombreInvLargo;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
@@ -343,7 +344,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "MANU";
 		int edadJugador = 40;
-		String idiomaValido = "Espanol";
+		String idiomaValido = idioma;
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaValido);
@@ -384,7 +385,7 @@ class JugadorTest {
 	@Test 
 	void testSetMasterNombreJugadorValido() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUEL";
+		String nombreJugador = nombreValido;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador());
 	}
@@ -393,7 +394,7 @@ class JugadorTest {
 	@Test 
 	void testSetMasterNombreJugadorValido2() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUEL";
+		String nombreJugador = nombreValido;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
@@ -402,7 +403,7 @@ class JugadorTest {
 	@Test 
 	void testSetMasterNombreJugadorValidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUELAGARRIDOABIEGO";
+		String nombreJugador = nombreLargo;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
@@ -411,7 +412,7 @@ class JugadorTest {
 	@Test 
 	void testSetMasterNombreJugadorInvalidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "MANUELA CASTAÑO SANCHEZ ";
+		String nombreJugador = nombreInvLargo;
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
@@ -448,7 +449,7 @@ class JugadorTest {
 			Jugador jugador = new Jugador();
 			String nombreJugador = "MANU";
 			int edadJugador = 101;
-			String idiomaValido = "Espanol";
+			String idiomaValido = idioma;
 			jugador.setNombreJugador(nombreJugador);
 			jugador.setEdad(edadJugador);
 			jugador.setIdioma(idiomaValido);
@@ -488,7 +489,7 @@ class JugadorTest {
 		@Test 
 		void testSetSuperMasterNombreNombreJugadorValido() {
 			Jugador jugador = new Jugador();
-			String nombreJugador = "MANUEL";
+			String nombreJugador = nombreValido;
 			jugador.setNombreJugador(nombreJugador);
 			assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador());
 		}
@@ -497,7 +498,7 @@ class JugadorTest {
 		@Test 
 		void testSetSuperMasterNombreNombreJugadorValido2() {
 			Jugador jugador = new Jugador();
-			String nombreJugador = "MANUEL";
+			String nombreJugador = nombreValido;
 			jugador.setNombreJugador(nombreJugador);
 			assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 		}
@@ -506,7 +507,7 @@ class JugadorTest {
 		@Test 
 		void testSetSuperMasterNombreNombreJugadorValidoMaximoCaracteres() {
 			Jugador jugador = new Jugador();
-			String nombreJugador = "MANUELAGARRIDOABIEGO";
+			String nombreJugador = nombreLargo;
 			jugador.setNombreJugador(nombreJugador);
 			assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 		}
@@ -515,7 +516,7 @@ class JugadorTest {
 		@Test 
 		void testSetSuperMasterNombreNombreJugadorInvalidoMaximoCaracteres() {
 			Jugador jugador = new Jugador();
-			String nombreJugador = "MANUELA CASTAÑO SANCHEZ ";
+			String nombreJugador = nombreInvLargo;
 			jugador.setNombreJugador(nombreJugador);
 			assertEquals(null,jugador.getNombreJugador());
 		}

@@ -3,6 +3,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class EquipoTest {
+	static String nombreEquipo = "dawfc";
+	static String primera = "Primera";
+	static String segunda = "Segunda";
+	static String tercera = "Tercera";
 	//Probamos nombre vacio
 	@Test
 	void testSetNombreEquipoVacio() {
@@ -15,7 +19,7 @@ class EquipoTest {
 	@Test
 	void testSetNombreEquipoValido() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		System.out.println(equipo.getNombreEquipo());
 		assertNotNull(equipo);
@@ -88,27 +92,27 @@ class EquipoTest {
 	@Test
 	void testSetPrimeraCategoriaMaximo () {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		int RankingValido = 10;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		equipo.setRanking(RankingValido);
-		assertEquals("Primera" , equipo.categoriaEquipo());
+		assertEquals(primera , equipo.categoriaEquipo());
 	}
 	//Probamos primera categoria valida 
 	@Test
 	void testSetPrimeraCategoria() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		int RankingValido = 8;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		equipo.setRanking(RankingValido);
-		assertEquals("Primera" , equipo.categoriaEquipo());
+		assertEquals(primera , equipo.categoriaEquipo());
 	}
 	//Probamos primera categoria invalida 
 	@Test
 	void testSetPrimeraCategoriaInv() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		int RankingValido = 3;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		equipo.setRanking(RankingValido);
@@ -118,77 +122,77 @@ class EquipoTest {
 	@Test
 	void testSetPrimeraCategoriaMinimo() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		int RankingValido = 7;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		equipo.setRanking(RankingValido);
-		assertEquals("Primera" , equipo.categoriaEquipo());
+		assertEquals(primera, equipo.categoriaEquipo());
 	}
 	//Probamos segunda categoria valida con limite superior
 	@Test
 	void testSetSegundaCategoriaMaximo() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		int RankingValido = 6;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		equipo.setRanking(RankingValido);
-		assertEquals("Segunda" , equipo.categoriaEquipo());
+		assertEquals(segunda, equipo.categoriaEquipo());
 	}
 	//Probamos segunda categoria valida 
 	@Test
 	void testSetSegundaCategoria() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		int RankingValido = 5;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		equipo.setRanking(RankingValido);
-		assertEquals("Segunda" , equipo.categoriaEquipo());
+		assertEquals(segunda, equipo.categoriaEquipo());
 	}
 	//Probamos segunda categoria invalida 
 		@Test
 		void testSetSegundaCategoriaInv() {
 			Equipo equipo = new Equipo();
-			String NombreEquipoValido = "dawfc";
+			String NombreEquipoValido = nombreEquipo;
 			int RankingValido = 0;
 			equipo.setNombreEquipo(NombreEquipoValido);
 			equipo.setRanking(RankingValido);
-			assertEquals(null , equipo.categoriaEquipo());
+			assertEquals(null, equipo.categoriaEquipo());
 		}
 	//Probamos segunda categoria valida con limite inferior
 	@Test
 	void testSetSegundaCategoriaMinimo() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		int RankingValido = 3;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		equipo.setRanking(RankingValido);
-		assertEquals("Segunda" , equipo.categoriaEquipo());
+		assertEquals(segunda, equipo.categoriaEquipo());
 	}
 	//Probamos segunda categoria valida con limite superior
 	@Test
 	void testSetTerceraCategoriaMaximo() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		int RankingValido = 3;
 		equipo.setRanking(RankingValido);
-		assertEquals("Tercera", equipo.categoriaEquipo());
+		assertEquals(tercera, equipo.categoriaEquipo());
 	}
 	//Probamos segunda categoria valida 
 	@Test
 	void testSetTerceraCategoria() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		int RankingValido = 2;
 		equipo.setRanking(RankingValido);
-		assertEquals("Tercera", equipo.categoriaEquipo());
+		assertEquals(tercera, equipo.categoriaEquipo());
 	}
 	//Probamos segunda categoria invalida 
 		@Test
 		void testSetTerceraCategoriaInv() {
 			Equipo equipo = new Equipo();
-			String NombreEquipoValido = "dawfc";
+			String NombreEquipoValido = nombreEquipo;
 			equipo.setNombreEquipo(NombreEquipoValido);
 			int RankingValido = 9;
 			equipo.setRanking(RankingValido);
@@ -198,11 +202,11 @@ class EquipoTest {
 	@Test
 	void testSetTerceraCategoriaMinimo() {
 		Equipo equipo = new Equipo();
-		String NombreEquipoValido = "dawfc";
+		String NombreEquipoValido = nombreEquipo;
 		equipo.setNombreEquipo(NombreEquipoValido);
 		int RankingValido = 0;
 		equipo.setRanking(RankingValido);
-		assertEquals("Tercera", equipo.categoriaEquipo());
+		assertEquals(tercera, equipo.categoriaEquipo());
 	}
 
 }
